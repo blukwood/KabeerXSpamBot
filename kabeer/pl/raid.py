@@ -16,7 +16,7 @@ from typing import Sequence
 @kabeercmd.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, user: Optional[User] = None):
 	if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
-		return await message.reply(parse_mode=None, link_preview=None)
+		return await message.reply(parse_mode=None, disable_web_page_preview=None)
 	predator = ' '.join(message.command[1:])
 	if message.reply_to_msg_id:             
 		a = await message
