@@ -18,7 +18,6 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
 	if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
 		return await message.reply(parse_mode=None, link_preview=None)
 	predator = ' '.join(message.command[1:])
-	smex = await message.reply_to_message()
 	if message.reply_to_msg_id:             
 		a = await message.reply_to_message
 		b = await message.reply_to_message.from_user
