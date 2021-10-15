@@ -8,37 +8,37 @@ from pyrogram.types import Message
 
 @kabeercmd.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, ctx: command.Context, user: Optional[User] = None):
-        if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
-            return await message.reply(parse_mode=None, link_preview=None )
-            predator = ' '.join(message.command[1:])
-        smex = await mesage.get_reply_message()
-        if len(predator) == 2:
-            message = str(predator[1])
-            print(message)
-            a = await ctx.message
-            g = a.user.id
-            c = a.user.first_name
-            username = f"[{c}](tg://user?id={g})"
-            counter = int(predator[0])
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-	await client.send_message(message.chat_id, caption)
-	await asyncio.sleep(0.3)
-        elif message.reply_to_msg_id:             
-            a = await ctx.message.reply_to_message
-            b = await ctx.message.reply_to_message.from_user
-            g = b.user.id
-            c = b.user.first_name
-            counter = int(predator[0])
-            username = f"[{c}](tg://user?id={g})"
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-	await client.send_message(message.chat_id, caption)
-	await asyncio.sleep(0.3)
+	if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
+		return await message.reply(parse_mode=None, link_preview=None )
+	predator = ' '.join(message.command[1:])
+	smex = await mesage.get_reply_message()
+	if len(predator) == 2:
+		message = str(predator[1])
+		print(message)
+		a = await ctx.message
+		g = a.user.id
+		c = a.user.first_name
+		username = f"[{c}](tg://user?id={g})"
+		counter = int(predator[0])
+		for _ in range(counter):
+			reply = random.choice(RAID)
+			caption = f"{username} {reply}"
+			await client.send_message(message.chat_id, caption)
+			await asyncio.sleep(0.3)
+	elif message.reply_to_msg_id:             
+		a = await ctx.message.reply_to_message
+		b = await ctx.message.reply_to_message.from_user
+		g = b.user.id
+		c = b.user.first_name
+		counter = int(predator[0])
+		username = f"[{c}](tg://user?id={g})"
+		for _ in range(counter):
+			reply = random.choice(RAID)
+			caption = f"{username} {reply}"
+			await client.send_message(message.chat_id, caption)
+			await asyncio.sleep(0.3)
         else:
-            await message.reply( parse_mode=None, link_preview=None )
+		await message.reply( parse_mode=None, link_preview=None )
         
         
         
