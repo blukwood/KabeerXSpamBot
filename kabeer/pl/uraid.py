@@ -37,7 +37,7 @@ async def raid(client: Client, message: Message, ctx: command.Context, user: Opt
 			caption = f"{username} {reply}"
 			await client.send_message(message.chat_id, caption)
 			await asyncio.sleep(0.3)
-        else:
+		else:
 		await message.reply(parse_mode=None, link_preview=None)
         
         
