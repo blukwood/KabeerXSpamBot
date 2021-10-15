@@ -10,32 +10,18 @@ from typing import Sequence
 
 
 
-class Context:
-    author: pyrogram.types.User
-    bot: "botSession"
-    chat: pyrogram.types.Chat
-    msg: pyrogram.types.Message
-    message: pyrogram.types.Message
-    cmd_len: int
 
-    response: pyrogram.types.Message
-    input: str
-    input_raw: str
-    args: Sequence[str]
-
-    segments: Sequence[str]
-    invoker: str
 
 
 @kabeercmd.on_message(filters.command('raid'))
-async def raid(client: Client, message: Message, ctx: Context, user: Optional[User] = None):
+async def raid(client: Client, message: Message, user: Optional[User] = None):
 	if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
 		return await message.reply(parse_mode=None, link_preview=None)
 	predator = ' '.join(message.command[1:])
 	smex = await mesage.get_reply_message()
 	if message.reply_to_msg_id:             
-		a = await ctx.message.reply_to_message
-		b = await ctx.message.reply_to_message.from_user
+		a = await message.reply_to_message
+		b = await message.reply_to_message.from_user
 		g = b.user.id
 		c = b.user.first_name
 		username = f"[{c}](tg://user?id={g})"
