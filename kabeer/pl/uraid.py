@@ -1,4 +1,4 @@
-from pyrogram import filters
+from pyrogram import filters, Client
 import asyncio
 from kabeer import kabeercmd
 from pyrogram.types import Chat, User
