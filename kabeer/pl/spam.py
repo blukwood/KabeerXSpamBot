@@ -74,5 +74,3 @@ async def slowspam(client: Client, message: Message):
         await asyncio.sleep(0.9)
 
 
-)
-
