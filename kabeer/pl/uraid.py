@@ -3,6 +3,8 @@ import asyncio
 from kabeer import kabeercmd
 from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
+from pyrogram.types import Message
+
 
 @kabeercmd.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, ctx: command.Context, user: Optional[User] = None):
