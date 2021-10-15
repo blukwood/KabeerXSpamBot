@@ -12,7 +12,7 @@ async def raid(client: Client, message: Message, ctx: command.Context, user: Opt
 		return await message.reply(parse_mode=None, link_preview=None)
 	predator = ' '.join(message.command[1:])
 	smex = await mesage.get_reply_message()
-	elif message.reply_to_msg_id:             
+	if message.reply_to_msg_id:             
 		a = await ctx.message.reply_to_message
 		b = await ctx.message.reply_to_message.from_user
 		g = b.user.id
