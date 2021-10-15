@@ -6,6 +6,10 @@ from typing import ClassVar, Optional
 from pyrogram.types import Message
 import pyrogram
 
+from typing import Sequence
+
+
+
 class Context:
     author: pyrogram.types.User
     bot: "botSession"
