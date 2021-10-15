@@ -1,4 +1,4 @@
-
+from pyrogram.types import Message
 import asyncio
 from kabeer import kabeercmd
 import asyncio
