@@ -19,8 +19,8 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
 		return await message.reply(parse_mode=None, link_preview=None)
 	predator = ' '.join(message.command[1:])
 	if message.reply_to_msg_id:             
-		a = await message.reply_to_message
-		b = await message.reply_to_message.from_user
+		a = await message
+		b = await message.from_user
 		g = b.user.id
 		c = b.user.first_name
 		username = f"[{c}](tg://user?id={g})"
