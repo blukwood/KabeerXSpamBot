@@ -6,8 +6,25 @@ from typing import ClassVar, Optional
 from pyrogram.types import Message
 
 
+class Context:
+    author: pyrogram.types.User
+    bot: "botSession"
+    chat: pyrogram.types.Chat
+    msg: pyrogram.types.Message
+    message: pyrogram.types.Message
+    cmd_len: int
+
+    response: pyrogram.types.Message
+    input: str
+    input_raw: str
+    args: Sequence[str]
+
+    segments: Sequence[str]
+    invoker: str
+
+
 @kabeercmd.on_message(filters.command('raid'))
-async def raid(client: Client, message: Message, ctx: command.Context, user: Optional[User] = None):
+async def raid(client: Client, message: Message, ctx: Context, user: Optional[User] = None):
 	if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
 		return await message.reply(parse_mode=None, link_preview=None)
 	predator = ' '.join(message.command[1:])
