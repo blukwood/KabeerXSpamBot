@@ -1,8 +1,8 @@
-from pyrogram import filters
+
 import asyncio
 from kabeer import kabeercmd
 import asyncio
-
+from pyrogram import filters, Client
 
 @kabeercmd.on_message(filters.command('delspam'))
 async def statspam(client: Client, message: Message):
