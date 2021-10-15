@@ -4,7 +4,7 @@ from kabeer import kabeercmd
 from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
-
+import pyrogram
 
 class Context:
     author: pyrogram.types.User
