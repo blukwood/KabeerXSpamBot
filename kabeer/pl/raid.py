@@ -32,6 +32,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
         caption = f"{username} {reply}"
         await client.send_message(message.chat_id, caption)
         await asyncio.sleep(0.3)
+        
     elif message.reply_to_msg_id:             
         a = message.reply_to_message.from_user
         b = await message.reply_to_message.from_user
@@ -44,6 +45,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
         caption = f"{username} {reply}"
         await client.send_message(message.chat_id, caption)
         await asyncio.sleep(0.3)
+        
     else:
         await message.reply( parse_mode=None, link_preview=None )
         
