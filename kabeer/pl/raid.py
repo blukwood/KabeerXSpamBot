@@ -16,37 +16,40 @@ GOD_USERS = Config.GOD_USERS
 @kabeercmd.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!") and reply.from_user.id == GOD_USERS:
-        return await message.reply(parse_mode=None, link_preview=None )
+            return await message.reply(parse_mode=None, link_preview=None )
         predator = ' '.join(message.command[1:])
         smex = await message.reply_to_message()
-    if len(predator) == 2:
-        message = str(predator[1])
-        print(message)
-        a = await message.from_user
-        g = a.id
-        c = a.first_name
-        username = f"[{c}](tg://user?id={g})"
-        counter = int(predator[0])
-    for _ in range(counter):
-        reply = random.choice(RAID)
-        caption = f"{username} {reply}"
-        await client.send_message(message.chat_id, caption)
-        await asyncio.sleep(0.3)
-    elif message.reply_to_msg_id:             
-        a = message.reply_to_message.from_user
-        b = await message.reply_to_message.from_user
-        g = b.id
-        c = b.first_name
-        counter = int(predator[0])
-        username = f"[{c}](tg://user?id={g})"
-    for _ in range(counter):
-        reply = random.choice(RAID)
-        caption = f"{username} {reply}"
-        await client.send_message(message.chat_id, caption)
-        await asyncio.sleep(0.3)
-    else:
-        await message.reply(parse_mode=None, link_preview=None)
-        
+        if len(predator) == 2:
+            message = str(predator[1])
+            print(message)
+            a = await message.from_user
+            g = a.id
+            c = a.first_name
+            username = f"[{c}](tg://user?id={g})"
+            counter = int(predator[0])
+            for _ in range(counter):
+                reply = random.choice(RAID)
+                caption = f"{username} {reply}"
+                async with message.client.action(message.chat_id, "typing"):
+                    await client.send_message(message.chat_id, caption)
+                    await asyncio.sleep(0.3)
+        elif message.reply_to_msg_id:             
+            a = message.reply_to_message.from_user
+            b = await message.reply_to_message.from_user
+            g = b.id
+            c = b.first_name
+            counter = int(predator[0])
+            username = f"[{c}](tg://user?id={g})"
+            for _ in range(counter):
+                reply = random.choice(RAID)
+                caption = f"{username} {reply}"
+                async with message.client.action(message.chat_id, "typing"):
+                    await client.send_message(message.chat_id, caption)
+                    await asyncio.sleep(0.3)
+        else:
+            await message.reply(parse_mode=None, link_preview=None)
+
+ 
         
 RAID = [
     "MADARCHOD TERI MAA KI CHUT ME GHUTKA KHAAKE THOOK DUNGA 🤣🤣",
