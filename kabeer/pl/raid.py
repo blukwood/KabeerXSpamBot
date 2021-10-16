@@ -15,7 +15,8 @@ GOD_USERS = Config.GOD_USERS
 
 @kabeercmd.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, user: Optional[User] = None):
-    if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!") and reply.from_user.id == GOD_USERS:
+    if reply.from_user.id == GOD_USERS:
+        if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
             return await message.reply(parse_mode=None)
         predator = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1) 
         smex = await message.reply_to_message()
