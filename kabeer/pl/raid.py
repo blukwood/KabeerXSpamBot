@@ -22,7 +22,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
         if len(predator) == 2:
             message = str(predator[1])
             print(message)
-            a = await message.from_user.
+            a = await message.from_user
             g = a.id
             c = a.first_name
             username = f"[{c}](tg://user?id={g})"
