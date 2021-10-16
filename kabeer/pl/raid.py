@@ -5,7 +5,7 @@ from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
 import pyrogram
-
+from kabeer import GOD_USERS
 from typing import Sequence
 
 
