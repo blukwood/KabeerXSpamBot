@@ -30,8 +30,8 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-	await client.send_message(message.chat_id, caption)
-	await asyncio.sleep(0.3)
+		await client.send_message(message.chat_id, caption)
+		await asyncio.sleep(0.3)
         elif message.reply_to_msg_id:             
             a = message.reply_to_message.from_user
             b = await message.reply_to_message.from_user
