@@ -17,7 +17,7 @@ GOD_USERS = Config.GOD_USERS
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!") and reply.from_user.id == GOD_USERS:
             return await message.reply(parse_mode=None)
-        predator = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1)
+        predator = ("".join(message.text.split(maxsplit=1)[1:])).split(" ", 1) 
         smex = await message.reply_to_message()
         if len(predator) == 2:
             message = str(predator[1])
@@ -47,7 +47,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                     await client.send_message(message.chat_id, caption)
                     await asyncio.sleep(0.3)
         else:
-            await message.reply(parse_mode=None, link_preview=None)
+            await message.reply(parse_mode=None)
 
  
         
