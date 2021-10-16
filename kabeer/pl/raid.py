@@ -17,8 +17,8 @@ GOD_USERS = Config.GOD_USERS
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!") and reply.from_user.id == GOD_USERS:
         return await message.reply(parse_mode=None, link_preview=None )
-    predator = ' '.join(message.command[1:])
-    smex = await message.reply_to_message()
+        predator = ' '.join(message.command[1:])
+        smex = await message.reply_to_message()
     if len(predator) == 2:
         message = str(predator[1])
         print(message)
@@ -33,19 +33,19 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
         await client.send_message(message.chat_id, caption)
         await asyncio.sleep(0.3)
     elif message.reply_to_msg_id:             
-            a = message.reply_to_message.from_user
-            b = await message.reply_to_message.from_user
-            g = b.id
-            c = b.first_name
-            counter = int(predator[0])
-            username = f"[{c}](tg://user?id={g})"
+        a = message.reply_to_message.from_user
+        b = await message.reply_to_message.from_user
+        g = b.id
+        c = b.first_name
+        counter = int(predator[0])
+        username = f"[{c}](tg://user?id={g})"
     for _ in range(counter):
-            reply = random.choice(RAID)
-            caption = f"{username} {reply}"
-            await client.send_message(message.chat_id, caption)
-            await asyncio.sleep(0.3)
+        reply = random.choice(RAID)
+        caption = f"{username} {reply}"
+        await client.send_message(message.chat_id, caption)
+        await asyncio.sleep(0.3)
     else:
-            await message.reply(parse_mode=None, link_preview=None)
+        await message.reply(parse_mode=None, link_preview=None)
         
         
 RAID = [
