@@ -9,4 +9,4 @@ if __name__ == '__main__':
     vcraidcmd.run()
     print("STARTED PLEASE SEE LOG CHANNEL FOR MORE INFO.")
     kabeercmd.send_message("BOT STARTED", LOGGER)
-    kabeercmd.send_message("VC RAIDER STARTED" LOGGER)
+    vcraidcmd.send_message("VC RAIDER STARTED" LOGGER)
