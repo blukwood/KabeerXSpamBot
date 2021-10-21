@@ -10,7 +10,7 @@ from typing import Sequence
 
 from typing import List, Union
 import random
-
+from kabeer import calls
 
 import pytgcalls 
 
@@ -25,8 +25,8 @@ async def vcraid(_,message):
   if reply:
     msg = await message.reply('Processing...')
     path = await reply.download()
-    await pytgcalls(vcraidcmd).join_group_call(message.chat.id)
-    await pytgcalls(vcraidcmd).stream_audio(path , repeat=False)
+    await calls.join_group_call(message.chat.id)
+    await calls.stream_audio(path , repeat=False)
     await msg.edit('AAJA VC BSDK, MAI BOLO GA AAB')
     
     
