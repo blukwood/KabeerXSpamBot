@@ -14,4 +14,4 @@ import random
 @kabeercmd.on_message(filters.command('vcraid'))
 @vcraidcmd.on_message(filters.command('raid'))
 async def vcraid(client: Client, message: Message):
-    message.reply("Hey", parse_mode=None)
+    await message.reply("Hey", parse_mode=None)
