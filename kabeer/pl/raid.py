@@ -9,7 +9,7 @@ from kabeer.config import Config
 from typing import Sequence
 
 from typing import List, Union
-
+import pyrogram.raw.functions.messages.SetTyping
 
 import random
 
@@ -37,7 +37,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                async with message.client.action(message.chat_id, "typing"):
+                async with message.SetTyping(message.chat_id, "typing"):
                     await client.send_message(message.chat_id, caption)
                     await asyncio.sleep(0.3)
         elif message.reply_to_message:             
