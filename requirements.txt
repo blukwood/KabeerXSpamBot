@@ -7,3 +7,8 @@ telethon
 
 # Basic modules
 pyromod
+
+
+# join vc 
+
+pytgcalls==3.0.0.dev19
