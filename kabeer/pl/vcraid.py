@@ -1,6 +1,6 @@
 from pyrogram import filters, Client
 import asyncio
-from kabeer import kabeercmd, vcraidcmd
+from kabeer import kabeercmd
 from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
