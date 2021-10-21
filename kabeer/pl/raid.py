@@ -40,7 +40,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                 async with message.client.action(message.chat_id, "typing"):
                     await client.send_message(message.chat_id, caption)
                     await asyncio.sleep(0.3)
-        elif message.reply_to_msg_id:             
+        elif message.reply_to_message.id:             
             a = message.reply_to_message.from_user
             b = await message.reply_to_message.from_user
             g = b.id
