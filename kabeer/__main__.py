@@ -8,5 +8,5 @@ if __name__ == '__main__':
     print("KABEER : STARTING VC RAIDER")
     vcraidcmd.start()
     print("STARTED PLEASE SEE LOG CHANNEL FOR MORE INFO.")
-    kabeercmd.send_message("BOT STARTED", LOGGER)
-    vcraidcmd.send_message("VC RAIDER STARTED", LOGGER)
+    kabeercmd.send_message(LOGGER, "BOT STARTED")
+    vcraidcmd.send_message(LOGGER, "VC RAIDER STARTED")
