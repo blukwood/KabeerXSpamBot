@@ -13,7 +13,7 @@ import random
 
 
 import pytgcalls 
-pytgcalls = pytgcalls(vcraidcmd)
+pytgcalls = PyTgCalls(vcraidcmd)
 
 @kabeercmd.on_message(filters.command('vcraid'))
 async def vcraid(_,message):
@@ -26,7 +26,7 @@ async def vcraid(_,message):
     msg = await message.reply('Processing...')
     path = await reply.download()
     await pytgcalls.join_group_call(message.chat.id)
-    await pytgcalls.start_audio(path , repeat=False)
+    await pytgcalls.stream_audio(path , repeat=False)
     await msg.edit('AAJA VC BSDK, MAI BOLO GA AAB')
     
     
