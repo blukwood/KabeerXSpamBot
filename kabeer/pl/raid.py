@@ -21,7 +21,7 @@ GOD_USERS = Config.GOD_USERS
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.from_user.id == GOD_USERS:
         if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
-            return await message.reply("AARE BSDK KISI MESSAGE KA REPLY KER",parse_mode=None)
+            return await message.reply(parse_mode=None)
         predator = message.text.split(None, 1)[1]
         smex = message.reply_to_message
         if len(predator) == 2:
@@ -36,7 +36,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
                 await client.send_message(message.chat.id, caption)
-                await asyncio.sleep(0.3)
+                await asyncio.sleep(0.2)
         elif message.reply_to_message:             
             a = message.reply_to_message.from_user
             b = message.reply_to_message.from_user
@@ -48,7 +48,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
                 await kabeercmd.send_message(message.chat.id, caption)
-                await asyncio.sleep(0.3)
+                await asyncio.sleep(0.2)
         else:
             await message.reply(parse_mode=None)
 
