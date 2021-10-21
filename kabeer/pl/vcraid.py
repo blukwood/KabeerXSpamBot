@@ -12,6 +12,6 @@ from typing import List, Union
 import random
 
 @kabeercmd.on_message(filters.command('vcraid'))
-@vcraidcmd.on_message(filters.command('raid'))
+@vcraidcmd.on_message(filters.command('vcraid'))
 async def vcraid(client: Client, message: Message):
     await message.reply("Hey", parse_mode=None)
