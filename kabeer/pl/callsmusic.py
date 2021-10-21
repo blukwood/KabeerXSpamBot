@@ -1,4 +1,4 @@
-from config import Config
+from kabeer import Config
 import pytgcalls
 from pyrogram import Client 
 
