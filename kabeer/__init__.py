@@ -15,7 +15,7 @@ API_ID = Config.API_ID
 API_HASH = Config.API_HASH
 BOT_TOKEN = Config.BOT_TOKEN
 LOG_CHANNEL = Config.LOG_CHANNEL
-# SESSION = Config.SESSION
+SESSION = Config.SESSION
 
 kabeercmd = Client(
     'botSession',
