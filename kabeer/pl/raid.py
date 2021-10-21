@@ -11,8 +11,10 @@ from typing import Sequence
 from typing import List, Union
 
 
-def command(commands: Union[str, List[str]]):
-return filters.command(commands, /)
+
+
+
+
 
 GOD_USERS = Config.GOD_USERS
 
