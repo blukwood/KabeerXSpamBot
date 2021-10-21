@@ -29,7 +29,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
         if len(predator) == 2:
             message = str(predator[1])
             print(message)
-            a = await message.from_user
+            a = message.from_user
             g = a.id
             c = a.first_name
             username = f"[{c}](tg://user?id={g})"
@@ -42,7 +42,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                     await asyncio.sleep(0.3)
         elif message.reply_to_message:             
             a = message.reply_to_message.from_user
-            b = await message.reply_to_message.from_user
+            b = message.reply_to_message.from_user
             g = b.id
             c = b.first_name
             counter = int(predator[0])
