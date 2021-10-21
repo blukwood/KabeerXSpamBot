@@ -1,4 +1,4 @@
-from kabeer import kabeercmd, vcraidcmd
+from kabeer import kabeercmd
 from kabeer import Config
 
 LOGGER = Config.LOG_CHANNEL
