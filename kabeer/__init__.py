@@ -2,7 +2,7 @@ from pyrogram import Client
 from pyromod import listen
 from kabeer.config import Config
 import logging
-import pytgcalls 
+from pytgcalls import PyTgCalls
 
 
 logging.basicConfig(
@@ -33,4 +33,4 @@ kabeercmd = Client(
 vcraidcmd = Client(SESSION, api_id=API_ID, api_hash=API_HASH)
 
 
-calls = pytgcalls(vcraidcmd)
+calls = PyTgCalls(vcraidcmd)
