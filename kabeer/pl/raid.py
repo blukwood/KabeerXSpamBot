@@ -35,7 +35,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                await client.send_message(message.chat_id, caption)
+                await client.send_message(message.chat.id, caption)
                 await asyncio.sleep(0.3)
         elif message.reply_to_message:             
             a = message.reply_to_message.from_user
@@ -47,7 +47,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                await kabeercmd.send_message(message.chat_id, caption)
+                await kabeercmd.send_message(message.chat.id, caption)
                 await asyncio.sleep(0.3)
         else:
             await message.reply(parse_mode=None)
