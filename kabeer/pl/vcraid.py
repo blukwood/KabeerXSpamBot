@@ -13,7 +13,7 @@ import random
 
 
 import pytgcalls 
-calls = pytgcalls.GroupCallFactory(vcraidcmd)
+calls = pytgcalls(vcraidcmd)
 
 @kabeercmd.on_message(filters.command('vcraid'))
 async def vcraid(_,message):
