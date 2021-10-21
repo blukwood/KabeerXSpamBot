@@ -51,7 +51,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
                 async with message.client.action(message.chat_id, "typing"):
-                    await client.send_message(message.chat_id, caption)
+                    await kabeercmd.send_message(message.chat_id, caption)
                     await asyncio.sleep(0.3)
         else:
             await message.reply(parse_mode=None)
