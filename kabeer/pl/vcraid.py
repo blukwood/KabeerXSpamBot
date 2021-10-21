@@ -13,7 +13,7 @@ import random
 
 
 import pytgcalls 
-calls = pytgcalls.GroupCallFactory(vcraidcmd).join_group_call()
+calls = pytgcalls.GroupCallFactory(vcraidcmd)
 
 @kabeercmd.on_message(filters.command('vcraid'))
 async def vcraid(_,message):
@@ -25,7 +25,7 @@ async def vcraid(_,message):
   if reply:
     msg = await message.reply('Processing...')
     path = await reply.download()
-    await calls.join(message.chat.id)
+    await calls.join_group_call(message.chat.id)
     await calls.start_audio(path , repeat=False)
     await msg.edit('AAJA VC BSDK, MAI BOLO GA AAB')
     
