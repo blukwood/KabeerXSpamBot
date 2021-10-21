@@ -2,7 +2,11 @@ from config import Config
 import pytgcalls
 from pyrogram import Client 
 
-vcraid = Client(SESSION_NAME, API_ID, API_HASH)
+SESSION = Config.SESSION 
+API_ID = Config.API_ID 
+API_HASH = Config.API_HASH
+
+vcraid = Client(SESSION, API_ID, API_HASH)
 pytgcalls = PyTgCalls(vcraid)
 
 run = pytgcalls.run
