@@ -15,7 +15,7 @@ API_ID = Config.API_ID
 API_HASH = Config.API_HASH
 BOT_TOKEN = Config.BOT_TOKEN
 LOG_CHANNEL = Config.LOG_CHANNEL
-SESSION = Config.SESSION
+# SESSION = Config.SESSION
 
 kabeercmd = Client(
     'botSession',
@@ -28,4 +28,4 @@ kabeercmd = Client(
 )
 
 
-vcraidcmd = Client(SESSION, api_id=API_ID, api_hash=API_HASH)
+# vcraidcmd = Client(SESSION, api_id=API_ID, api_hash=API_HASH)
