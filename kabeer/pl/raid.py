@@ -24,8 +24,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.from_user.id == GOD_USERS:
         if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
             return await message.reply(parse_mode=None)
-        for i in message.command[1:]:
-        predator += " " + str(i)
+        predator = message.text.split(None, 1)[1]
         smex = await message.reply_to_message()
         if len(predator) == 2:
             message = str(predator[1])
