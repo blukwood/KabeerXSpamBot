@@ -6,4 +6,4 @@ class Config(object):
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     LOG_CHANNEL = int(os.getenv("LOG_CHANNEL"))
     GOD_USERS = int(os.getenv("GOD_USERS"))
-    SESSION = int(os.getenv("SESSION")
+    SESSION = os.getenv("SESSION")
