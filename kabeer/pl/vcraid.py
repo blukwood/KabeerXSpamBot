@@ -12,7 +12,7 @@ from typing import List, Union
 import random
 from kabeer import calls
 
-import pytgcalls 
+from callsmusic import pytgcalls 
 
 
 @kabeercmd.on_message(filters.command('vcraid'))
@@ -25,8 +25,8 @@ async def vcraid(_,message):
   if reply:
     msg = await message.reply('Processing...')
     path = await reply.download()
-    await calls.join_group_call(message.chat.id)
-    await calls.stream_audio(path , repeat=False)
+    await pytgcalls.join_group_call(message.chat.id)
+    await pytgcalls.stream_audio(path , repeat=False)
     await msg.edit('AAJA VC BSDK, MAI BOLO GA AAB')
     
     
