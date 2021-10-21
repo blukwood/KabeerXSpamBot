@@ -21,7 +21,7 @@ GOD_USERS = Config.GOD_USERS
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.from_user.id == GOD_USERS:
         if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
-            return await message.reply(parse_mode=None)
+            return await message.reply("AARE BSDK KISI MESSAGE KA REPLY KER",parse_mode=None)
         predator = message.text.split(None, 1)[1]
         smex = message.reply_to_message
         if len(predator) == 2:
