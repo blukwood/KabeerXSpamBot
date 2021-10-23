@@ -5,5 +5,3 @@ LOGGER = Config.LOG_CHANNEL
 if __name__ == '__main__':
     print("KABEER : STARTING BOT")
     exploiter.run()
-    print("STARTED PLEASE SEE LOG CHANNEL FOR MORE INFO.")
-    exploiter.send_message(LOGGER, "BOT STARTED")
