@@ -4,7 +4,7 @@ from kabeer import exploiter
 from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
-import pyogram
+import pyrogram
 from kabeer.config import Config
 from typing import sequence
 
