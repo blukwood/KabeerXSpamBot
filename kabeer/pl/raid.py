@@ -1,6 +1,6 @@
 from pyrogram import filters, Client
 import asyncio
-from kabeer import kabeercmd
+from kabeer import exploiter
 from pyrogram.types import Chat, User
 from typing import ClassVar, Optional
 from pyrogram.types import Message
@@ -17,7 +17,7 @@ import random
 GOD_USERS = Config.GOD_USERS
 
 
-@kabeercmd.on_message(filters.command('raid'))
+@exploiter.on_message(filters.command('raid'))
 async def raid(client: Client, message: Message, user: Optional[User] = None):
     if message.from_user.id == GOD_USERS:
         if message.text[0].isalpha() and message.text[0] in ("/", "#", "@", "!"):
@@ -35,7 +35,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                await client.send_message(message.chat.id, caption)
+                await exploiter.send_message(message.chat.id, caption)
                 await asyncio.sleep(0.2)
         elif message.reply_to_message:             
             a = message.reply_to_message.from_user
@@ -47,7 +47,7 @@ async def raid(client: Client, message: Message, user: Optional[User] = None):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                await kabeercmd.send_message(message.chat.id, caption)
+                await exploiter.send_message(message.chat.id, caption)
                 await asyncio.sleep(0.2)
         else:
             await message.reply(parse_mode=None)
