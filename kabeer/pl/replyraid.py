@@ -232,13 +232,11 @@ async def rrl(client: Client, message: Message):
     queue = que.get(message.from_user.id)
     if not queue:
         return
-    await asyncio.sleep(0.3)
-    await client.send_message(
-            chat_id,
-            message="""{}""".format(random.choice(RAIDHU)),
-            message.id,
-        )
-
+    reply = random.choice(RAIDHU)
+    caption = f"{reply}"
+    await client.reply(message.chat.id, caption)
+    await asyncio.sleep(0.2)
+                
 @exploiter.on_message(filters.command('replyraid'))
 async def arr(client: Client, message: Message):
     global que
