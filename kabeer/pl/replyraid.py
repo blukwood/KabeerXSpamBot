@@ -6,7 +6,6 @@ from typing import ClassVar, Optional
 from pyrogram.types import Message
 import pyrogram
 from kabeer.config import Config
-from typing import sequence
 
 from typing import List, Union
 import random
