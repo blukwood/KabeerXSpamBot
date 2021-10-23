@@ -4,7 +4,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup
 )
 
-from kabeer import kabeercmd
+from kabeer import exploiter
 
 MESSAGE = (
         'Hello there!\n'
@@ -13,14 +13,14 @@ MESSAGE = (
     )
 
 KEYBOARD = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text='Support', callback_data='sele_pyrogram')],
-    [InlineKeyboardButton(text='Updates', callback_data='sele_telethon')]]
+    [[InlineKeyboardButton(text='Support', url='https://t.me/RhythmOff')],
+    [InlineKeyboardButton(text='Updates', url='https://t.me/RhythmOfficial')]]
 )
 
-@kabeercmd.on_message(filters.text & filters.private & ~filters.bot)
+@exploiter.on_message(filters.text & filters.private & ~filters.bot)
 async def start(sessionCli, message):
     await message.reply(
         text=MESSAGE,
         reply_markup=KEYBOARD,
-        disable_web_page_preview=False
+        disable_web_page_preview=True
     )
