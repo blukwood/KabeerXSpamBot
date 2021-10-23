@@ -16,7 +16,7 @@ API_HASH = Config.API_HASH
 BOT_TOKEN = Config.BOT_TOKEN
 LOG_CHANNEL = Config.LOG_CHANNEL
 
-kabeercmd = Client(
+exploiter = Client(
     'botSession',
     api_id=API_ID,
     api_hash=API_HASH,
